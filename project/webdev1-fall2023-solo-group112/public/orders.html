@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Orders</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Front Page</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="users.html">List Users</a></li>
+        <li><a href="products.html">List Products</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+	<li><a href="orders.html">Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Orders</h1>
+    <div id="notifications-container"></div>
+    <div id="order-details"></div>
+    <div id="products-container"></div>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 diipadaa etc etc.</p>
+  </footer>
+  <template id="product-template">
+	<div class="item-row">
+      <h3 class="product-name"></h3>
+      <p class="product-description"></p>
+      <p class="product-price"></p>
+      <p class="product-quantity"></p>
+      <p class="total-price"></p>
+
+      <Button class="order-details">Details</Button>
+    </div>
+  </template>
+  <template id="detail-template">
+  <form id="show-detail-template" method="POST">
+        <h2 class="text-align-center">Add product</h2>
+	<div class="form-group">
+          <label id="id" >ID:</label>
+	  <p id="id-text"></p>
+        </div>
+        <div class="form-group">
+          <label id="name">Name:</label>
+	  <p id="id-name"></p>
+        </div>
+        <div class="form-group">
+          <label id="price">Price:</label>
+	  <p id="id-price"></p>
+        </div>
+        <div class="form-group">
+          <label id="description">Description:</label>
+	  <p id="id-description"></p>
+        </div>
+        <div class="form-group">
+          <label id="quantity">Amount:</label>
+	  <p id="id-quantity"></p>
+        </div>
+	<div class="form-group">
+          <label id="total-price">Total-price:</label>
+	  <p id="id-total-price"></p>
+        </div>
+	<div class="form-group">
+          <div class="second-column">
+            <button type="submit" id="update-button">Close</button>
+          </div>
+        </div>
+      </form>
+  </template>
+  <script src="js/utils.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+
+</html>
